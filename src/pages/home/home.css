@@ -1,0 +1,48 @@
+.container {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+    }
+
+
+    .list-item {
+        max-width: 350px;
+        border: 1px solid white;
+        padding: 1rem;
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+
+        .green {
+            color: green;
+        }
+    }
+
+    .list-item:hover {
+        cursor: pointer;
+    }
+
+
+    @media (min-width: 600px) {
+        ul {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 900px) {
+        ul {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (min-width: 1200px) {
+        ul {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+
+}
+
